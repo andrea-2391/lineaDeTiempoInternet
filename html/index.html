@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de Internet - Línea de Tiempo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* TABLA PRINCIPAL */
+        .timeline-container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* BANNER SUPERIOR */
+        .banner {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        /* CONTENEDOR DE NAVEGACIÓN */
+        .nav-container {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .nav-events {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        /* BOTONES DE EVENTOS */
+        .event-btn {
+            display: inline-block;
+            padding: 12px 18px;
+            background-color: #3498db;
+            color: white;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .event-btn:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-btn:active {
+            background-color: #e74c3c;
+            border-color: #c0392b;
+            box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
+        }
+
+        /* CONTENEDOR DE CONTENIDO */
+        .content-container {
+            padding: 0;
+            min-height: 500px;
+        }
+
+        .content-frame {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .banner h1 {
+                font-size: 1.8em;
+            }
+
+            .nav-events {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .event-btn {
+                width: 100%;
+            }
+
+            .content-container {
+                padding: 20px;
+                min-height: 400px;
+            }
+
+            .event-btn {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner {
+                padding: 25px 15px;
+            }
+
+            .banner h1 {
+                font-size: 1.4em;
+            }
+
+            .banner p {
+                font-size: 0.95em;
+            }
+
+            .content-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- TABLA PRINCIPAL SIN BORDES -->
+    <table class="timeline-container">
+        
+        <!-- FILA 1: BANNER -->
+        <tr>
+            <td class="banner">
+                <h1>Historia de Internet - Línea de Tiempo Interactiva</h1>
+                <p>Andrea Giraldo Vasquez</p>
+            </td>
+        </tr>
+
+        <!-- FILA 2: NAVEGACIÓN DE EVENTOS -->
+        <tr>
+            <td class="nav-container">
+                <div class="nav-events">
+                    <a href="evento1.html" target="contenido-frame" class="event-btn">1969 - ARPANET</a>
+                    <a href="evento2.html" target="contenido-frame" class="event-btn">1990 - World Wide Web</a>
+                    <a href="evento3.html" target="contenido-frame" class="event-btn">1998 - Google</a>
+                    <a href="evento4.html" target="contenido-frame" class="event-btn">2004 - Facebook</a>
+                    <a href="evento5.html" target="contenido-frame" class="event-btn">2005 - YouTube</a>
+                    <a href="evento6.html" target="contenido-frame" class="event-btn">2007 - iPhone</a>
+                    <a href="evento7.html" target="contenido-frame" class="event-btn">2010 - Instagram</a>
+                    <a href="evento8.html" target="contenido-frame" class="event-btn">2022 - ChatGPT</a>
+                    <a href="evento9.html" target="contenido-frame" class="event-btn">2025 - HOY</a>
+                </div>
+            </td>
+        </tr>
+
+        <!-- FILA 3: IFRAME PARA CONTENIDO -->
+        <tr>
+            <td class="content-container">
+                <iframe name="contenido-frame" class="content-frame" src="evento1.html" frameborder="0" scrolling="yes"></iframe>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
